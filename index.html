@@ -1,0 +1,264 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+		<title>Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilo.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+    </head>
+    <body>
+        <section id="intro-boids" style="height: 300px; position: relative; overflow: hidden; ">
+            <div id="canvas-container" ></div>
+        </section>
+        <section class="presentacion">
+            <div class="row ml-5 mr-5 justify-content-around">
+                <div>
+                    <h1>Rub&eacute;n Mart&iacute;nez Gonz&aacute;lez</h1>
+                    <p>Ingenier&iacute;a Multimedia</p>                    
+                </div>
+
+            </div>
+            <div class="row justify-content-center mt-3">
+                <button class="btn-portfolio" onclick="mostrarMas()">Ver m&aacute;s</button>
+                <button class="btn-portfolio" onclick="mostrarContacto()">Contacto</button>
+            </div>
+            <ul id="contacto">
+                <li>676138583
+                    <button class="botonGlobal" aria-label="Copiar número de teléfono" title="Copiar tel&eacute;fono" onclick="copiarAlPortapapeles('676138583')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                </li> 
+                <li>rubennmg1996@gmail.com
+                    <button class="botonGlobal" title="Copiar correo" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                </li>
+            </ul>
+            <article class="mostrarMas" id="mostrarMas">
+                <p>Natural de Albacete y El Herrumblar (Cuenca)</p>
+                <p>He trabajado toda mi vida como agricultor (vi&ntilde;a) y ocasionalmente como camarero</p>
+                <p>Interesado en la programación, y en especial en los videojuegos</p>
+                <p>Conocimientos en desarrollo web, modelado 3D, programación en Java, C++, Python, SQL, etc.</p>
+            </article>
+
+        </section>
+        <div class="container-fluid divSinPadding">
+            <section class="conocimientos">
+                <header>
+                    <h1>Conocimientos</h1>
+                </header>     
+                <h2>Desarrollo WEB</h2>
+                <div class="row">
+                   
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/html5.png">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/CSS3.png">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/JavaScript.png">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/bootstrap.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/servlet-jsp.png">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/PHP.png">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/canvas.svg">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/treejs.webp">
+                    </div>
+                </div>
+                
+                <h2>Otros</h2>
+                <div class="row">
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/unity.png">
+                        <p>Desarrollo de videojuegos, Realidad Virtual (XRI) y Realidad Aumentada (Vuforia)</p>
+                    </article>  
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <div>
+                            <img src="./media/python+blender.png">
+                        </div>
+                        <p>Creaci&oacute;n de modelos 3D, animaciones mediante interpolaci&oacute;n, scripts</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/c++.png">
+                        <p>Programaci&oacute;n orientada a objetos, tipos abstractos de datos, estructuras de datos, algoritmos</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/Java.png">
+                        <p>Aplicaciones de escritorio con SWING, AWT y Graphics</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/Sql.png">
+                        <p>Creaci&oacute;n de bases de datos, consultas</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/Git.png">
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/UML.png">
+                        <p>Diagramas de clases, secuencia, casos de uso, etc.</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/processing.png">
+                        <p>Simulaci&oacute;n de f&iacute;sicas: Muelles, sistemas de part&iacute;culas, objetos deformables, inteligencia artificial de personajes</p>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
+                        <img src="./media/kotlin.png">
+                        <p>Desarrollo de Aplicaciones Móviles con Kotlin</p>
+                    </article>
+                </div>
+            </section>
+            <section class="proyectos">
+                <header>
+                    <h1>Proyectos</h1>
+                </header>
+                <div>
+                    <h2>Web de restaurante</h2>
+                    <article class="articleProyecto1">
+                        <div id="descProyecto1">
+                            
+                                <lite-youtube videoid="d1vcOs2orBU"></lite-youtube>
+    
+                                <a href="https://github.com/rubenmg1996/cafeteria-aries" target="_blank" title="Ver proyecto">
+                                    <img src="./media/copilot-logo.svg">
+                                    <br>
+                                    <span>Ver proyecto</span>
+                                </a>
+                            
+                            
+                            <p>Proyecto Maven desarrollado con HTML, CSS3, JavaScript y Bootstrap en el frontend, Java y JSPs en el backend.
+                            También con una página para administrar la web elaborada con PHP</p>
+                            <p>El proyecto consiste en una tienda virtual en la que realizar pedidos a un restaurante. Cuenta con login, 
+                            registro, carrito de la compra, catálogo de productos ordenados por categoría, con opción de añadirlos al carrito,
+                            opciones de cambiar datos de usuario, etc. </p>
+                            <p>En cuanto a la web de administraci&oacute;n, se pueden ver y modificar usuarios, productos y pedidos, con un filtro
+                            de b&uacute;suqeda para estas &uacute;ltimas </p>
+                            <p>Descripción más amplia en GitHub</p>
+                        </div>
+                    </article>
+            </div>
+            <hr style="border: none; border-top: 2px solid gray; margin: 40px 0;" />
+
+            <div>
+                    <h2>Red social de recetas de cocina (Aún en desarrollo)</h2>
+                    <article class="articleProyecto1">
+                        <div id="descProyecto1">
+                                <div class="imagenes-app">
+                                    <img src="./media/TopChef/Login.jpeg" alt="Login">
+                                    <img src="./media/TopChef/Perfil.jpeg" alt="Perfil">
+                                    <img src="./media/TopChef/Receta.jpeg" alt="Receta">
+                                    <img src="./media/TopChef/Subir.jpeg" alt="Subir receta">
+                                    <img src="./media/TopChef/Recetas.jpeg" alt="Recetas">
+                                </div>
+                            
+                                <a href="./archivos/TopChef.apk" class="boton-descarga">
+                                    <img src="./media/download-icon.svg">
+                                    <br>
+                                    <span>Descargar APK</span>
+                                </a>
+                            
+                            
+                            <p>Red social inspirada en Instagram en la que compartir recetas y tips rápidos de cocina.</p>
+                            <p>Desarrollado con Kotlin </p>
+                            <p>Cuenta con un sistema de valoraciones múltiples en las recetas, lo que permite un sistema de búsqueda más personalizado.</p>
+                            </p>
+                            <p>El proyecto aún está en desarrollo, quedando pendientes cosas como la base de datos, apis para conectar con Instagram  o YouTube, comentarios, etc.</p>
+                        </div>
+                    </article>
+            </div>
+
+                        <hr style="border: none; border-top: 2px solid gray; margin: 40px 0;" />
+
+            <div>
+                    <h2>Prácticas de Empresa</h2>
+                    <article class="articleProyecto1">
+                        <div id="descProyecto1">
+                                <p>Realicé las prácticas en  <a href = "https://www.escueladeciencia.com" target="_blank">Escuela de Ciencia</a></p>
+                                <p>Durante este periodo realicé dos proyectos que sirvieron como guía para Up! Steam.</p>
+                                <p>UpSteam! es una competición entre centros educativos de la Comunidad Valenciana con varias temáticas, una de ellas videojuegos</p>
+                                <p>Se trata de dos juegos muy simples, que sirvieron para introducir a los participantes de la competición en MakeCode Arcade y Unity</p>
+                                <p>Los proyectos fueron:</p>
+                                <ul>
+                                    <li>Un juego multijugador de la Tomatina, desarrollado en MakeCode Arcade (similar a Scratch) <a target="_blank" href="https://guias.upsteam.es/programacin-con-makecode-arcade"> Guía de La Tomatina</a></li>
+                                    <li>Un juego del Puente de las Flores, desarrollado en Unity <a target="_blank" href="https://guias.upsteam.es/programacin-con-unity"> Guía del Puente de las Flores</a> </li>
+                                </ul>
+                                <p>Ambos proyectos fueron desarrollados en su totalidad por mí, además también elaboré las guías didácticas.</p>
+                                <p>Además, hice una versión para Android del Puente de las Flores, haciendo varias mejoras de rendimiento</p>
+                                <a href="./archivos/PuenteFlores.apk" class="boton-descarga">
+                                    <img src="./media/download-icon.svg">
+                                    <br>
+                                    <span>Descargar APK</span>
+                                </a>
+
+
+                            <p>Puedes probar ambos juegos <a target="_blank" href="https://escueladeciencia.itch.io/">Aquí</a></p>
+
+                        </div>
+                    </article>
+            </div>
+
+            </section>
+        </div>
+        <script>
+
+            function mostrarMas() {
+            document.getElementById("contacto").classList.remove('mostrar');
+            document.getElementById("mostrarMas").classList.toggle('mostrar');
+            }
+
+            function mostrarContacto() {
+            document.getElementById("mostrarMas").classList.remove('mostrar');
+            document.getElementById("contacto").classList.toggle('mostrar');
+            }
+
+            function copiarAlPortapapeles(texto) {
+                navigator.clipboard.writeText(texto);
+                
+                const boton = event.currentTarget;
+                const iconoOk = boton.querySelector('.botonOk');
+                const iconoCopiar = boton.querySelector('.botonCopiar');
+                
+                // Animación suave
+                iconoCopiar.style.opacity = '0';
+                setTimeout(() => {
+                    iconoCopiar.style.display = 'none';
+                    iconoOk.style.display = 'inline';
+                    iconoOk.style.opacity = '1';
+                }, 200);
+                
+                setTimeout(() => {
+                    iconoOk.style.opacity = '0';
+                    setTimeout(() => {
+                        iconoOk.style.display = 'none';
+                        iconoCopiar.style.display = 'inline';
+                        iconoCopiar.style.opacity = '1';
+                    }, 200);
+                }, 2000);
+            }
+        </script>
+         <script src="./mis-etiquietas.js"></script>
+        <script src="./letrasAlum.js"></script>
+        <script src="./Vehicle.js"></script>
+
+        <footer class="text-center py-4" style="color: var(--text-terciary); background: var(--bg-secondary);">
+            <p>© 2024 Rubén Martínez González | Portfolio</p>
+            <p>
+                <a href="#" style="color: var(--enlace);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
+                        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                    </svg>
+                    Volver arriba
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>
