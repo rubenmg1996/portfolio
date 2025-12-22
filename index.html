@@ -1,14 +1,22 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-		<title>Portfolio</title>
+		<title>Portfolio | Rubén Martínez González</title>
+        <meta name="description" content="Portfolio de Rubén Martínez González, ingeniero multimedia con experiencia en desarrollo web, aplicaciones móviles y videojuegos.">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="estilo.css">
         <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-
+        <link rel="alternate" hreflang="es" href="/">
+        <link rel="alternate" hreflang="en" href="/en/">
     </head>
+
     <body>
+
+        <div style="position: absolute; top: 15px; right: 20px;">
+            <a href="/en/" style="color: var(--enlace); font-weight: bold;">EN</a>
+        </div>
+        <br>
         <section id="intro-boids" style="height: 300px; position: relative; overflow: hidden; ">
             <div id="canvas-container" ></div>
         </section>
@@ -26,17 +34,17 @@
             </div>
             <ul id="contacto">
                 <li>676138583
-                    <button class="botonGlobal" aria-label="Copiar número de teléfono" title="Copiar tel&eacute;fono" onclick="copiarAlPortapapeles('676138583')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                    <button class="botonGlobal" aria-label="Copy number" title="Copy" onclick="copiarAlPortapapeles('676138583')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
                 </li> 
                 <li>rubennmg1996@gmail.com
-                    <button class="botonGlobal" title="Copiar correo" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                    <button class="botonGlobal" title="Copy email" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
                 </li>
             </ul>
             <article class="mostrarMas" id="mostrarMas">
                 <p>Natural de Albacete y El Herrumblar (Cuenca)</p>
                 <p>He trabajado toda mi vida como agricultor (vi&ntilde;a) y ocasionalmente como camarero</p>
                 <p>Interesado en la programación, y en especial en los videojuegos</p>
-                <p>Conocimientos en desarrollo web, modelado 3D, programación en Java, C++, Python, SQL, etc.</p>
+                <p>Conocimientos en desarrollo web, informática gráfica, apps móviles, videojuegos y varios lenguajes</p>
             </article>
 
         </section>
@@ -80,13 +88,13 @@
                 <div class="row">
                     <article class="col-lg-3 col-md-6 col-sm-6 text-center">
                         <img src="./media/unity.png">
-                        <p>Desarrollo de videojuegos, Realidad Virtual (XRI) y Realidad Aumentada (Vuforia)</p>
+                        <p>Desarrollo de videojuegos, implementación de shaders y herramientas, Realidad Virtual (XRI) y Realidad Aumentada (Vuforia)</p>
                     </article>  
                     <article class="col-lg-3 col-md-6 col-sm-6 text-center">
                         <div>
                             <img src="./media/python+blender.png">
                         </div>
-                        <p>Creaci&oacute;n de modelos 3D, animaciones mediante interpolaci&oacute;n, scripts</p>
+                        <p>Creaci&oacute;n de modelos 3D, animaciones mediante interpolaci&oacute;n, scripting</p>
                     </article>
                     <article class="col-lg-3 col-md-6 col-sm-6 text-center">
                         <img src="./media/c++.png">
@@ -113,7 +121,7 @@
                     </article>
                     <article class="col-lg-3 col-md-6 col-sm-6 text-center">
                         <img src="./media/kotlin.png">
-                        <p>Desarrollo de Aplicaciones Móviles con Kotlin</p>
+                        <p>Desarrollo de Aplicaciones Móviles con Android Studio</p>
                     </article>
                 </div>
             </section>
@@ -135,14 +143,16 @@
                                 </a>
                             
                             
-                            <p>Proyecto Maven desarrollado con HTML, CSS3, JavaScript y Bootstrap en el frontend, Java y JSPs en el backend.
-                            También con una página para administrar la web elaborada con PHP</p>
-                            <p>El proyecto consiste en una tienda virtual en la que realizar pedidos a un restaurante. Cuenta con login, 
-                            registro, carrito de la compra, catálogo de productos ordenados por categoría, con opción de añadirlos al carrito,
-                            opciones de cambiar datos de usuario, etc. </p>
-                            <p>En cuanto a la web de administraci&oacute;n, se pueden ver y modificar usuarios, productos y pedidos, con un filtro
-                            de b&uacute;suqeda para estas &uacute;ltimas </p>
-                            <p>Descripción más amplia en GitHub</p>
+                            <p class="texto">Aplicación web de gestión y venta para una cafetería, desarrollada como proyecto completo usando tecnologías de frontend y backend, estructurada bajo un proyecto Maven.</p>
+                            <p class="texto">Este sistema permite a los usuarios navegar por un catálogo de productos por categorías, añadir productos a un carrito de compra, y realizar pedidos gestionados por una base de datos relacional. </p>
+                            <p class="texto">Además, incluye un panel de administración con funciones de gestión de productos, usuarios y pedidos.</p>
+                            <ul> Tecnologías utilizadas:
+                                <li>Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
+                                <li>Backend: Java Servlets, JSP, PHP para panel de administración</li>
+                                <li>JSON para gestión del carrito</li>
+                                <li>Base de datos: MariaDB</li>
+                                <li>Gestión de dependencias y construcción: Maven</li>
+                            </ul>
                         </div>
                     </article>
             </div>
@@ -161,17 +171,17 @@
                                 </div>
                             
                                 <a href="./archivos/TopChef.apk" class="boton-descarga">
-                                    <img src="./media/download-icon.svg">
+                                   <svg  class="icono-descarga" version="1.1" fill="currentColor" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.5 122.88" style="enable-background:new 0 0 102.5 122.88" xml:space="preserve">
+                                        <g><path d="M69.78,0.72C69.3,0.29,68.62,0,67.95,0c-0.14,0-0.29,0-0.43,0.05l-61.42,0c-1.64,0-3.19,0.68-4.3,1.79 C0.68,2.95,0,4.45,0,6.14v110.65c0,1.69,0.68,3.19,1.79,4.3c1.11,1.11,2.61,1.79,4.3,1.79c31.03,0,59.35,0,90.22,0 c1.69,0,3.19-0.68,4.3-1.79c1.11-1.11,1.79-2.61,1.79-4.3V35.52c0.05-0.24,0.1-0.43,0.1-0.68c0-0.82-0.39-1.55-0.92-2.08 L70.12,0.92c-0.1-0.1-0.15-0.14-0.24-0.19H69.78L69.78,0.72z M48.51,83.75V48.86c0-1.49,1.2-2.69,2.73-2.69 c1.49,0,2.73,1.2,2.73,2.69v34.86l12.52-10.93c1.11-0.98,2.82-0.89,3.8,0.22c0.98,1.11,0.89,2.79-0.22,3.77L53.05,91.64 c-1.05,0.92-2.6,0.89-3.61-0.03L32.45,76.77c-1.11-0.98-1.24-2.66-0.22-3.77c0.98-1.11,2.69-1.2,3.8-0.22l12.52,10.93L48.51,83.75 L48.51,83.75z M65.19,5.51v23.83c0,2.27,0.92,4.35,2.42,5.85c1.5,1.5,3.58,2.42,5.85,2.42h23.39v79.19c0,0.15-0.05,0.34-0.19,0.43 c-0.1,0.1-0.24,0.19-0.43,0.19c-24.57,0-66.28,0-90.18,0c-0.15,0-0.34-0.05-0.43-0.19c-0.1-0.1-0.19-0.29-0.19-0.43V6.14 c0-0.19,0.05-0.34,0.19-0.43c0.1-0.1,0.24-0.19,0.43-0.19h59.1H65.19L65.19,5.51z M70.65,29.34V9.38l22.47,22.76H73.45 c-0.77,0-1.45-0.34-1.98-0.82C70.99,30.83,70.65,30.11,70.65,29.34L70.65,29.34z"/></g></svg>
                                     <br>
                                     <span>Descargar APK</span>
                                 </a>
                             
                             
-                            <p>Red social inspirada en Instagram en la que compartir recetas y tips rápidos de cocina.</p>
-                            <p>Desarrollado con Kotlin </p>
-                            <p>Cuenta con un sistema de valoraciones múltiples en las recetas, lo que permite un sistema de búsqueda más personalizado.</p>
+                            <p class="texto">Red social inspirada en Instagram en la que compartir recetas y tips rápidos de cocina, desarrollada con Kotlin</p>
+                            <p class="texto">Cuenta con un sistema de valoraciones múltiples en las recetas, lo que permite un sistema de búsqueda más personalizado.</p>
                             </p>
-                            <p>El proyecto aún está en desarrollo, quedando pendientes cosas como la base de datos, apis para conectar con Instagram  o YouTube, comentarios, etc.</p>
+                            <p class="texto">El proyecto aún está en desarrollo, actualmente estoy implementando la conexión con la Base de Datos</p>
                         </div>
                     </article>
             </div>
@@ -182,25 +192,24 @@
                     <h2>Prácticas de Empresa</h2>
                     <article class="articleProyecto1">
                         <div id="descProyecto1">
-                                <p>Realicé las prácticas en  <a href = "https://www.escueladeciencia.com" target="_blank">Escuela de Ciencia</a></p>
-                                <p>Durante este periodo realicé dos proyectos que sirvieron como guía para Up! Steam.</p>
-                                <p>UpSteam! es una competición entre centros educativos de la Comunidad Valenciana con varias temáticas, una de ellas videojuegos</p>
-                                <p>Se trata de dos juegos muy simples, que sirvieron para introducir a los participantes de la competición en MakeCode Arcade y Unity</p>
-                                <p>Los proyectos fueron:</p>
+                                <p class="texto">Realicé las prácticas en  <a href = "https://www.escueladeciencia.com" target="_blank">Escuela de Ciencia</a>. Hice dos videojuegos que sirvieron como muestra para Up! STEAM</p>
+                                <p class="texto">Up! STEAM es una competición entre centros educativos de la Comunidad Valenciana con varias temáticas, una de ellas el desarrollo de videojuegos</p>
+                                <p class="texto">Se trata de dos juegos muy simples, que sirvieron para introducir a los participantes de la competición en MakeCode Arcade y Unity. Además de desarrollar los videojuegos, elaboré las guías para realizarlos</p>
+                                <p class="texto">Los proyectos fueron:</p>
                                 <ul>
-                                    <li>Un juego multijugador de la Tomatina, desarrollado en MakeCode Arcade (similar a Scratch) <a target="_blank" href="https://guias.upsteam.es/programacin-con-makecode-arcade"> Guía de La Tomatina</a></li>
+                                    <li>Un juego multijugador de la Tomatina de Buñol, desarrollado en MakeCode Arcade (similar a Scratch) <a target="_blank" href="https://guias.upsteam.es/programacin-con-makecode-arcade"> Guía de La Tomatina</a></li>
                                     <li>Un juego del Puente de las Flores, desarrollado en Unity <a target="_blank" href="https://guias.upsteam.es/programacin-con-unity"> Guía del Puente de las Flores</a> </li>
                                 </ul>
-                                <p>Ambos proyectos fueron desarrollados en su totalidad por mí, además también elaboré las guías didácticas.</p>
-                                <p>Además, hice una versión para Android del Puente de las Flores, haciendo varias mejoras de rendimiento</p>
+                                <p class="texto">Además, hice una versión para Android del Puente de las Flores, haciendo varias mejoras de rendimiento, añadiendo controles y parte del procreso para publicarlo en la Google Play Store</p>
                                 <a href="./archivos/PuenteFlores.apk" class="boton-descarga">
-                                    <img src="./media/download-icon.svg">
+                                    <svg  class="icono-descarga" version="1.1" fill="currentColor" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.5 122.88" style="enable-background:new 0 0 102.5 122.88" xml:space="preserve">
+                                        <g><path d="M69.78,0.72C69.3,0.29,68.62,0,67.95,0c-0.14,0-0.29,0-0.43,0.05l-61.42,0c-1.64,0-3.19,0.68-4.3,1.79 C0.68,2.95,0,4.45,0,6.14v110.65c0,1.69,0.68,3.19,1.79,4.3c1.11,1.11,2.61,1.79,4.3,1.79c31.03,0,59.35,0,90.22,0 c1.69,0,3.19-0.68,4.3-1.79c1.11-1.11,1.79-2.61,1.79-4.3V35.52c0.05-0.24,0.1-0.43,0.1-0.68c0-0.82-0.39-1.55-0.92-2.08 L70.12,0.92c-0.1-0.1-0.15-0.14-0.24-0.19H69.78L69.78,0.72z M48.51,83.75V48.86c0-1.49,1.2-2.69,2.73-2.69 c1.49,0,2.73,1.2,2.73,2.69v34.86l12.52-10.93c1.11-0.98,2.82-0.89,3.8,0.22c0.98,1.11,0.89,2.79-0.22,3.77L53.05,91.64 c-1.05,0.92-2.6,0.89-3.61-0.03L32.45,76.77c-1.11-0.98-1.24-2.66-0.22-3.77c0.98-1.11,2.69-1.2,3.8-0.22l12.52,10.93L48.51,83.75 L48.51,83.75z M65.19,5.51v23.83c0,2.27,0.92,4.35,2.42,5.85c1.5,1.5,3.58,2.42,5.85,2.42h23.39v79.19c0,0.15-0.05,0.34-0.19,0.43 c-0.1,0.1-0.24,0.19-0.43,0.19c-24.57,0-66.28,0-90.18,0c-0.15,0-0.34-0.05-0.43-0.19c-0.1-0.1-0.19-0.29-0.19-0.43V6.14 c0-0.19,0.05-0.34,0.19-0.43c0.1-0.1,0.24-0.19,0.43-0.19h59.1H65.19L65.19,5.51z M70.65,29.34V9.38l22.47,22.76H73.45 c-0.77,0-1.45-0.34-1.98-0.82C70.99,30.83,70.65,30.11,70.65,29.34L70.65,29.34z"/></g></svg>
                                     <br>
                                     <span>Descargar APK</span>
                                 </a>
 
 
-                            <p>Puedes probar ambos juegos <a target="_blank" href="https://escueladeciencia.itch.io/">Aquí</a></p>
+                            <p class="texto">Puedes probar ambos juegos <a target="_blank" href="https://escueladeciencia.itch.io/">Aquí</a></p>
 
                         </div>
                     </article>

@@ -238,7 +238,7 @@ function draw_points()
 
 
 function preload() {
-  font = loadFont("LetterGothicStd.otf");
+  font = loadFont("../LetterGothicStd.otf");
 }
 
 function calcularTamañoFuente() {
@@ -269,6 +269,10 @@ function setup() {
   console.log(maxDiameter);
   
   frase = 'BIENVENIDO';
+
+  if (window.location.pathname.startsWith("/en/")) {
+    frase = "WELCOME";
+}
   
   // Calcular el ancho del texto
 
@@ -354,13 +358,18 @@ function draw() {
     textAlpha = lerp(textAlpha, 0, 0.1);   // Fade out
   }
 
+  let mensajeComportamiento = 'Pulsa 1, 2 o 3; R o A para cambiar el comportamiento inicial';
+  if (window.location.pathname.startsWith("/en/")) {
+    mensajeComportamiento = "Press 1, 2 or 3; R or A to change the initial behavior";
+  }
+
   // Mostrar el texto con opacidad si es visible
   if (textAlpha > 1) {
     fill(255, textAlpha); // Aplicar opacidad
     let responsiveSize = constrain(canvasWidth * 0.02, 10, 24);
     textSize(responsiveSize);
     textAlign(CENTER);
-    text('Pulsa 1, 2 o 3; R o A para cambiar el comportamiento inicial', canvasWidth / 2, canvasHeight - 30);
+    text(mensajeComportamiento, canvasWidth / 2, canvasHeight - 30);
   }
     for (let i = 0; i < boids.length; i++) {
     boids[i].run(boids);  // Actualizar y dibujar cada boid
