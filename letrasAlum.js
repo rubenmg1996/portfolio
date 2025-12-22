@@ -359,7 +359,7 @@ function draw() {
   }
 
   let mensajeComportamiento = 'Pulsa 1, 2 o 3; R o A para cambiar el comportamiento inicial';
-  if (window.location.pathname.startsWith("portfolio/en/")) {
+  if (window.location.pathname.startsWith("/portfolio/en/")) {
     mensajeComportamiento = "Press 1, 2 or 3; R or A to change the initial behavior";
   }
 
