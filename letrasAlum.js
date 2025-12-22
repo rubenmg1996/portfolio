@@ -238,7 +238,7 @@ function draw_points()
 
 
 function preload() {
-  font = loadFont("../portfolio/LetterGothicStd.otf");
+  font = loadFont("LetterGothicStd.otf");
 }
 
 function calcularTamañoFuente() {
