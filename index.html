@@ -1,273 +1,292 @@
+
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-		<title>Portfolio | Rubén Martínez González</title>
-        <meta name="description" content="Portfolio de Rubén Martínez González, ingeniero multimedia con experiencia en desarrollo web, aplicaciones móviles y videojuegos.">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="estilo.css">
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-        <link rel="alternate" hreflang="es" href="/">
-        <link rel="alternate" hreflang="en" href="/en/">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="description" content="Portfolio profesional de Rubén Martínez González, desarrollador backend especializado en arquitecturas SaaS B2B multi-tenant.">
+  <title>Rubén Martínez González | Backend Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <body>
+<header>
+  <nav class="container">
+    <a class="logo" href="#inicio">Rubén<span>.</span></a>
+    <div class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#formacion">Formación</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+</header>
 
-        <div style="position: absolute; top: 15px; right: 20px;">
-            <a href="/portfolio/en/" style="color: var(--enlace); font-weight: bold;">EN</a>
+<main>
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="eyebrow">Desarrollador Backend · Ingeniería Multimedia</div>
+      <h1>Hola, soy Rubén.<br>Construyo <span>soluciones</span> digitales.</h1>
+      <p>
+        Desarrollador backend especializado en aplicaciones web y arquitecturas
+        SaaS B2B multi-tenant. Me interesa diseñar sistemas robustos, APIs
+        eficientes e infraestructuras que puedan crecer y evolucionar.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#experiencia">Ver experiencia</a>
+        <a class="btn secondary" href="#contacto">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="section-label">Introducción</div>
+      <h2>Sobre mí</h2>
+      <p class="muted">
+        Soy Ingeniero Multimedia por la Universitat de València y actualmente
+        trabajo como desarrollador backend en IndivaSaaS, dentro de Finca
+        Soluciones Tecnológicas.
+      </p>
+      <p class="muted">
+        Mi trabajo se centra principalmente en el desarrollo de APIs REST,
+        lógica de negocio, gestión de bases de datos y servicios para plataformas
+        empresariales. También tengo experiencia en desarrollo de aplicaciones
+        móviles, videojuegos y tecnologías web.
+      </p>
+      <p class="muted">
+        Disfruto especialmente resolviendo problemas técnicos, mejorando
+        arquitecturas existentes y aprendiendo nuevas herramientas para
+        desarrollar software mantenible y eficiente.
+      </p>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-label">Trayectoria profesional</div>
+      <h2>Experiencia</h2>
+
+      <article class="card experience-card">
+        <div class="card-top">
+          <div>
+            <h3>Desarrollador Backend</h3>
+            <div class="muted">IndivaSaaS · Finca Soluciones Tecnológicas</div>
+          </div>
+          <div class="date">Actualmente</div>
         </div>
-        <br>
-        <section id="intro-boids" style="height: 300px; position: relative; overflow: hidden; ">
-            <div id="canvas-container" ></div>
-        </section>
-        <section class="presentacion">
-            <div class="row ml-5 mr-5 justify-content-around">
-                <div>
-                    <h1>Rub&eacute;n Mart&iacute;nez Gonz&aacute;lez</h1>
-                    <p>Ingenier&iacute;a Multimedia</p>                    
-                </div>
-
-            </div>
-            <div class="row justify-content-center mt-3">
-                <button class="btn-portfolio" onclick="mostrarMas()">Ver m&aacute;s</button>
-                <button class="btn-portfolio" onclick="mostrarContacto()">Contacto</button>
-            </div>
-            <ul id="contacto">
-                <li>676138583
-                    <button class="botonGlobal" aria-label="Copy number" title="Copy" onclick="copiarAlPortapapeles('676138583')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
-                </li> 
-                <li>rubennmg1996@gmail.com
-                    <button class="botonGlobal" title="Copy email" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
-                </li>
-            </ul>
-            <article class="mostrarMas" id="mostrarMas">
-                <p>Natural de Albacete y El Herrumblar (Cuenca)</p>
-                <p>He trabajado toda mi vida como agricultor (vi&ntilde;a) y ocasionalmente como camarero</p>
-                <p>Interesado en la programación, y en especial en los videojuegos</p>
-                <p>Conocimientos en desarrollo web, informática gráfica, apps móviles, videojuegos y varios lenguajes</p>
-            </article>
-
-        </section>
-        <div class="container-fluid divSinPadding">
-            <section class="conocimientos">
-                <header>
-                    <h1>Conocimientos</h1>
-                </header>     
-                <h2>Desarrollo WEB</h2>
-                <div class="row">
-                   
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/html5.png">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/CSS3.png">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/JavaScript.png">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/bootstrap.png">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/servlet-jsp.png">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/PHP.png">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/canvas.svg">
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/treejs.webp">
-                    </div>
-                </div>
-                
-                <h2>Otros</h2>
-                <div class="row">
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/unity.png">
-                        <p>Desarrollo de videojuegos, implementación de shaders y herramientas, Realidad Virtual (XRI) y Realidad Aumentada (Vuforia)</p>
-                    </article>  
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <div>
-                            <img src="./media/python+blender.png">
-                        </div>
-                        <p>Creaci&oacute;n de modelos 3D, animaciones mediante interpolaci&oacute;n, scripting</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/c++.png">
-                        <p>Programaci&oacute;n orientada a objetos, tipos abstractos de datos, estructuras de datos, algoritmos</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/Java.png">
-                        <p>Aplicaciones de escritorio con SWING, AWT y Graphics</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/Sql.png">
-                        <p>Creaci&oacute;n de bases de datos, consultas</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/Git.png">
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/UML.png">
-                        <p>Diagramas de clases, secuencia, casos de uso, etc.</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/processing.png">
-                        <p>Simulaci&oacute;n de f&iacute;sicas: Muelles, sistemas de part&iacute;culas, objetos deformables, inteligencia artificial de personajes</p>
-                    </article>
-                    <article class="col-lg-3 col-md-6 col-sm-6 text-center">
-                        <img src="./media/kotlin.png">
-                        <p>Desarrollo de Aplicaciones Móviles con Android Studio</p>
-                    </article>
-                </div>
-            </section>
-            <section class="proyectos">
-                <header>
-                    <h1>Proyectos</h1>
-                </header>
-                <div>
-                    <h2>Web de restaurante</h2>
-                    <article class="articleProyecto1">
-                        <div id="descProyecto1">
-                            
-                                <lite-youtube videoid="d1vcOs2orBU"></lite-youtube>
-    
-                                <a href="https://github.com/rubenmg1996/cafeteria-aries" target="_blank" title="Ver proyecto">
-                                    <img src="./media/copilot-logo.svg">
-                                    <br>
-                                    <span>Ver proyecto</span>
-                                </a>
-                            
-                            
-                            <p class="texto">Aplicación web de gestión y venta para una cafetería, desarrollada como proyecto completo usando tecnologías de frontend y backend, estructurada bajo un proyecto Maven.</p>
-                            <p class="texto">Este sistema permite a los usuarios navegar por un catálogo de productos por categorías, añadir productos a un carrito de compra, y realizar pedidos gestionados por una base de datos relacional. </p>
-                            <p class="texto">Además, incluye un panel de administración con funciones de gestión de productos, usuarios y pedidos.</p>
-                            <ul> Tecnologías utilizadas:
-                                <li>Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
-                                <li>Backend: Java Servlets, JSP, PHP para panel de administración</li>
-                                <li>JSON para gestión del carrito</li>
-                                <li>Base de datos: MariaDB</li>
-                                <li>Gestión de dependencias y construcción: Maven</li>
-                            </ul>
-                        </div>
-                    </article>
-            </div>
-            <hr style="border: none; border-top: 2px solid gray; margin: 40px 0;" />
-
-            <div>
-                    <h2>Red social de recetas de cocina (Aún en desarrollo)</h2>
-                    <article class="articleProyecto1">
-                        <div id="descProyecto1">
-                                <div class="imagenes-app">
-                                    <img src="./media/TopChef/Login.jpeg" alt="Login">
-                                    <img src="./media/TopChef/Perfil.jpeg" alt="Perfil">
-                                    <img src="./media/TopChef/Receta.jpeg" alt="Receta">
-                                    <img src="./media/TopChef/Subir.jpeg" alt="Subir receta">
-                                    <img src="./media/TopChef/Recetas.jpeg" alt="Recetas">
-                                </div>
-                            
-                                <a href="./archivos/TopChef.apk" class="boton-descarga">
-                                   <svg  class="icono-descarga" version="1.1" fill="currentColor" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.5 122.88" style="enable-background:new 0 0 102.5 122.88" xml:space="preserve">
-                                        <g><path d="M69.78,0.72C69.3,0.29,68.62,0,67.95,0c-0.14,0-0.29,0-0.43,0.05l-61.42,0c-1.64,0-3.19,0.68-4.3,1.79 C0.68,2.95,0,4.45,0,6.14v110.65c0,1.69,0.68,3.19,1.79,4.3c1.11,1.11,2.61,1.79,4.3,1.79c31.03,0,59.35,0,90.22,0 c1.69,0,3.19-0.68,4.3-1.79c1.11-1.11,1.79-2.61,1.79-4.3V35.52c0.05-0.24,0.1-0.43,0.1-0.68c0-0.82-0.39-1.55-0.92-2.08 L70.12,0.92c-0.1-0.1-0.15-0.14-0.24-0.19H69.78L69.78,0.72z M48.51,83.75V48.86c0-1.49,1.2-2.69,2.73-2.69 c1.49,0,2.73,1.2,2.73,2.69v34.86l12.52-10.93c1.11-0.98,2.82-0.89,3.8,0.22c0.98,1.11,0.89,2.79-0.22,3.77L53.05,91.64 c-1.05,0.92-2.6,0.89-3.61-0.03L32.45,76.77c-1.11-0.98-1.24-2.66-0.22-3.77c0.98-1.11,2.69-1.2,3.8-0.22l12.52,10.93L48.51,83.75 L48.51,83.75z M65.19,5.51v23.83c0,2.27,0.92,4.35,2.42,5.85c1.5,1.5,3.58,2.42,5.85,2.42h23.39v79.19c0,0.15-0.05,0.34-0.19,0.43 c-0.1,0.1-0.24,0.19-0.43,0.19c-24.57,0-66.28,0-90.18,0c-0.15,0-0.34-0.05-0.43-0.19c-0.1-0.1-0.19-0.29-0.19-0.43V6.14 c0-0.19,0.05-0.34,0.19-0.43c0.1-0.1,0.24-0.19,0.43-0.19h59.1H65.19L65.19,5.51z M70.65,29.34V9.38l22.47,22.76H73.45 c-0.77,0-1.45-0.34-1.98-0.82C70.99,30.83,70.65,30.11,70.65,29.34L70.65,29.34z"/></g></svg>
-                                    <br>
-                                    <span>Descargar APK</span>
-                                </a>
-                            
-                            
-                            <p class="texto">Red social inspirada en Instagram en la que compartir recetas y tips rápidos de cocina, desarrollada con Kotlin</p>
-                            <p class="texto">Cuenta con un sistema de valoraciones múltiples en las recetas, lo que permite un sistema de búsqueda más personalizado.</p>
-                            </p>
-                            <p class="texto">El proyecto aún está en desarrollo, actualmente estoy implementando la conexión con la Base de Datos</p>
-                        </div>
-                    </article>
-            </div>
-
-                        <hr style="border: none; border-top: 2px solid gray; margin: 40px 0;" />
-
-            <div>
-                    <h2>Prácticas de Empresa</h2>
-                    <article class="articleProyecto1">
-                        <div id="descProyecto1">
-                                <p class="texto">Realicé las prácticas en  <a href = "https://www.escueladeciencia.com" target="_blank">Escuela de Ciencia</a>. Hice dos videojuegos que sirvieron como muestra para Up! STEAM</p>
-                                <p class="texto">Up! STEAM es una competición entre centros educativos de la Comunidad Valenciana con varias temáticas, una de ellas el desarrollo de videojuegos</p>
-                                <p class="texto">Se trata de dos juegos muy simples, que sirvieron para introducir a los participantes de la competición en MakeCode Arcade y Unity. Además de desarrollar los videojuegos, elaboré las guías para realizarlos</p>
-                                <p class="texto">Los proyectos fueron:</p>
-                                <ul>
-                                    <li>Un juego multijugador de la Tomatina de Buñol, desarrollado en MakeCode Arcade (similar a Scratch) <a target="_blank" href="https://guias.upsteam.es/programacin-con-makecode-arcade"> Guía de La Tomatina</a></li>
-                                    <li>Un juego del Puente de las Flores, desarrollado en Unity <a target="_blank" href="https://guias.upsteam.es/programacin-con-unity"> Guía del Puente de las Flores</a> </li>
-                                </ul>
-                                <p class="texto">Además, hice una versión para Android del Puente de las Flores, haciendo varias mejoras de rendimiento, añadiendo controles y parte del procreso para publicarlo en la Google Play Store</p>
-                                <a href="./archivos/PuenteFlores.apk" class="boton-descarga">
-                                    <svg  class="icono-descarga" version="1.1" fill="currentColor" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.5 122.88" style="enable-background:new 0 0 102.5 122.88" xml:space="preserve">
-                                        <g><path d="M69.78,0.72C69.3,0.29,68.62,0,67.95,0c-0.14,0-0.29,0-0.43,0.05l-61.42,0c-1.64,0-3.19,0.68-4.3,1.79 C0.68,2.95,0,4.45,0,6.14v110.65c0,1.69,0.68,3.19,1.79,4.3c1.11,1.11,2.61,1.79,4.3,1.79c31.03,0,59.35,0,90.22,0 c1.69,0,3.19-0.68,4.3-1.79c1.11-1.11,1.79-2.61,1.79-4.3V35.52c0.05-0.24,0.1-0.43,0.1-0.68c0-0.82-0.39-1.55-0.92-2.08 L70.12,0.92c-0.1-0.1-0.15-0.14-0.24-0.19H69.78L69.78,0.72z M48.51,83.75V48.86c0-1.49,1.2-2.69,2.73-2.69 c1.49,0,2.73,1.2,2.73,2.69v34.86l12.52-10.93c1.11-0.98,2.82-0.89,3.8,0.22c0.98,1.11,0.89,2.79-0.22,3.77L53.05,91.64 c-1.05,0.92-2.6,0.89-3.61-0.03L32.45,76.77c-1.11-0.98-1.24-2.66-0.22-3.77c0.98-1.11,2.69-1.2,3.8-0.22l12.52,10.93L48.51,83.75 L48.51,83.75z M65.19,5.51v23.83c0,2.27,0.92,4.35,2.42,5.85c1.5,1.5,3.58,2.42,5.85,2.42h23.39v79.19c0,0.15-0.05,0.34-0.19,0.43 c-0.1,0.1-0.24,0.19-0.43,0.19c-24.57,0-66.28,0-90.18,0c-0.15,0-0.34-0.05-0.43-0.19c-0.1-0.1-0.19-0.29-0.19-0.43V6.14 c0-0.19,0.05-0.34,0.19-0.43c0.1-0.1,0.24-0.19,0.43-0.19h59.1H65.19L65.19,5.51z M70.65,29.34V9.38l22.47,22.76H73.45 c-0.77,0-1.45-0.34-1.98-0.82C70.99,30.83,70.65,30.11,70.65,29.34L70.65,29.34z"/></g></svg>
-                                    <br>
-                                    <span>Descargar APK</span>
-                                </a>
-
-
-                            <p class="texto">Puedes probar ambos juegos <a target="_blank" href="https://escueladeciencia.itch.io/">Aquí</a></p>
-
-                        </div>
-                    </article>
-            </div>
-
-            </section>
+        <p class="muted">
+          Desarrollo y mantenimiento de una plataforma SaaS B2B multi-tenant
+          para la gestión de mantenimiento (CMMS/GMAO), con funcionalidades
+          GIS, energéticas y documentales.
+        </p>
+        <ul>
+          <li>Desarrollo de APIs REST y lógica de negocio para aplicaciones web Angular y móvil.</li>
+          <li>Integración con API Gateway, incluyendo autenticación, firma y enrutamiento de peticiones.</li>
+          <li>Gestión de arquitectura multi-tenant en PostgreSQL, con esquemas independientes por proyecto.</li>
+          <li>Implementación de roles, autorización y control de permisos.</li>
+          <li>Desarrollo y evolución de un microservicio de gestión documental, con almacenamiento CAS y migración hacia S3/blob.</li>
+          <li>Migración de funcionalidades GIS desde un monolito Django a servicios Flask.</li>
+          <li>Procesamiento asíncrono de notificaciones e informes mediante Celery y colas de Laravel.</li>
+          <li>Configuración de procesos CI/CD, workers con Supervisor y operaciones en entornos Linux y Docker.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">PHP</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">Lumen</span>
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">Flask</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Git / GitHub Actions</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Celery</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Nginx</span>
         </div>
-        <script>
+      </article>
 
-            function mostrarMas() {
-            document.getElementById("contacto").classList.remove('mostrar');
-            document.getElementById("mostrarMas").classList.toggle('mostrar');
-            }
+      <article class="card experience-card">
+        <div class="card-top">
+          <div>
+            <h3>Desarrollador de videojuegos y aplicaciones educativas</h3>
+            <div class="muted">Escuela de Ciencia</div>
+          </div>
+          <div class="date">Nov. 2024 – Feb. 2025</div>
+        </div>
+        <ul>
+          <li>Desarrollo de videojuegos educativos con Unity, C# y MakeCode Arcade.</li>
+          <li>Creación de guías didácticas para actividades de programación.</li>
+          <li>Optimización de aplicaciones Android, controles táctiles y rendimiento.</li>
+          <li>Preparación y publicación de aplicaciones en Google Play.</li>
+          <li>Participación en el desarrollo de un proyecto de realidad virtual con Unity.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://guias.upsteam.es/programacin-con-makecode-arcade" target="_blank" rel="noopener noreferrer">Guía MakeCode Arcade ↗</a>
+          <a href="https://guias.upsteam.es/programacin-con-unity" target="_blank" rel="noopener noreferrer">Guía Unity ↗</a>
+          <a href="https://escueladeciencia.itch.io/" target="_blank" rel="noopener noreferrer">Proyectos en itch.io ↗</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">MakeCode Arcade</span>
+          <span class="tag">Android</span>
+          <span class="tag">Realidad virtual</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
-            function mostrarContacto() {
-            document.getElementById("mostrarMas").classList.remove('mostrar');
-            document.getElementById("contacto").classList.toggle('mostrar');
-            }
+  <section id="tecnologias">
+    <div class="container">
+      <div class="section-label">Herramientas y conocimientos</div>
+      <h2>Tecnologías</h2>
+      <div class="grid">
+        <div class="card skill-group">
+          <h3>Backend</h3>
+          <p>PHP, Laravel, Lumen, Python, Django, Flask, Java, C#, C/C++.</p>
+        </div>
+        <div class="card skill-group">
+          <h3>Bases de datos y procesamiento</h3>
+          <p>PostgreSQL, Redis, MariaDB, Supabase, Celery, Laravel Queue.</p>
+        </div>
+        <div class="card skill-group">
+          <h3>Frontend y desarrollo web</h3>
+          <p>JavaScript, HTML5, CSS3, Bootstrap, Kotlin, Canvas, Three.js.</p>
+        </div>
+        <div class="card skill-group">
+          <h3>Infraestructura y herramientas</h3>
+          <p>Docker, Nginx, Git, GitHub Actions, Linux, Supervisor.</p>
+        </div>
+        <div class="card skill-group">
+          <h3>GIS y tecnologías multimedia</h3>
+          <p>GeoServer, WMS, Unity, desarrollo de videojuegos y aplicaciones móviles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            function copiarAlPortapapeles(texto) {
-                navigator.clipboard.writeText(texto);
-                
-                const boton = event.currentTarget;
-                const iconoOk = boton.querySelector('.botonOk');
-                const iconoCopiar = boton.querySelector('.botonCopiar');
-                
-                // Animación suave
-                iconoCopiar.style.opacity = '0';
-                setTimeout(() => {
-                    iconoCopiar.style.display = 'none';
-                    iconoOk.style.display = 'inline';
-                    iconoOk.style.opacity = '1';
-                }, 200);
-                
-                setTimeout(() => {
-                    iconoOk.style.opacity = '0';
-                    setTimeout(() => {
-                        iconoOk.style.display = 'none';
-                        iconoCopiar.style.display = 'inline';
-                        iconoCopiar.style.opacity = '1';
-                    }, 200);
-                }, 2000);
-            }
-        </script>
-         <script src="./mis-etiquietas.js"></script>
-        <script src="./letrasAlum.js"></script>
-        <script src="./Vehicle.js"></script>
+  <section id="proyectos">
+    <div class="container">
+      <div class="section-label">Trabajo personal y académico</div>
+      <h2>Proyectos</h2>
+      <div class="grid">
 
-        <footer class="text-center py-4" style="color: var(--text-terciary); background: var(--bg-secondary);">
-            <p>© 2024 Rubén Martínez González | Portfolio</p>
-            <p>
-                <a href="#" style="color: var(--enlace);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
-                        <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
-                    </svg>
-                    Volver arriba
-                </a>
-            </p>
-        </footer>
-    </body>
+        <article class="card project-card">
+          <h3>TopChef · Red social gastronómica</h3>
+          <p>
+            Aplicación móvil orientada a compartir recetas y contenido
+            gastronómico. Proyecto desarrollado para Android.
+          </p>
+          <div class="tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Android Studio</span>
+            <span class="tag">Supabase</span>
+          </div>
+          <div class="project-links">
+            <a href="https://rubenmg1996.github.io/portfolio/archivos/TopChef.apk" target="_blank" rel="noopener noreferrer">Descargar APK ↗</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Cafetería Aries · Web de restaurante</h3>
+          <p>
+            Desarrollo de una aplicación web para un restaurante, con
+            arquitectura MVC y tecnologías Java y PHP.
+          </p>
+          <div class="tags">
+            <span class="tag">Java J2EE</span>
+            <span class="tag">Servlets</span>
+            <span class="tag">JSP</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MariaDB</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/rubenmg1996/cafeteria-aries" target="_blank" rel="noopener noreferrer">Ver en GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Juegos educativos · Escuela de Ciencia</h3>
+          <p>
+            Desarrollo de experiencias interactivas y videojuegos educativos
+            para acercar la programación a estudiantes.
+          </p>
+          <div class="tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">MakeCode Arcade</span>
+          </div>
+          <div class="project-links">
+            <a href="https://escueladeciencia.itch.io/" target="_blank" rel="noopener noreferrer">Ver proyectos ↗</a>
+            <a href="https://guias.upsteam.es/programacin-con-makecode-arcade" target="_blank" rel="noopener noreferrer">Guía MakeCode ↗</a>
+            <a href="https://guias.upsteam.es/programacin-con-unity" target="_blank" rel="noopener noreferrer">Guía Unity ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion">
+    <div class="container">
+      <div class="section-label">Estudios</div>
+      <h2>Formación académica</h2>
+      <article class="card education-card">
+        <div class="card-top">
+          <div>
+            <h3>Grado en Ingeniería Multimedia</h3>
+            <div class="muted">Universitat de València</div>
+          </div>
+          <div class="date">Sept. 2019 – Jul. 2025</div>
+        </div>
+        <p class="muted">
+          Formación multidisciplinar en ingeniería y desarrollo de software,
+          combinando programación, tecnologías web y multimedia.
+        </p>
+        <ul>
+          <li>Desarrollo de aplicaciones y servicios web, tanto en frontend como en backend.</li>
+          <li>Programación, diseño de software y resolución de problemas mediante algoritmos.</li>
+          <li>Diseño y desarrollo de aplicaciones móviles.</li>
+          <li>Desarrollo de videojuegos y aplicaciones interactivas con motores como Unity.</li>
+          <li>Informática gráfica, modelado y animación 3D.</li>
+          <li>Exploración de tecnologías multimedia e interactivas, incluyendo entornos inmersivos.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="section-label">Hablemos</div>
+      <h2>Contacto</h2>
+      <div class="card contact-card">
+        <h3>¿Tienes un proyecto o una propuesta?</h3>
+        
+        <div class="contact-details">
+          <a href="mailto:rubennmg1996@gmail.com" onclick="event.preventDefault(); copiarCorreo('rubennmg1996@gmail.com');">✉ rubennmg1996@gmail.com</a>
+          <a href="https://wa.me/34676138583" target="_blank" rel="noopener noreferrer">WhatsApp: 676 138 583 ↗</a>
+        </div>
+        <div id="copied-message" class="toast-message" aria-live="polite">Correo copiado al portapapeles</div>
+        <div class="contact-note">
+          No puedo atender llamadas durante mi jornada
+          de trabajo. Escribeme un correo o WhatsApp y te responderé lo antes posible.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Rubén Martínez González · Desarrollador Backend
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>

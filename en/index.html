@@ -41,10 +41,10 @@
 
     <ul id="contacto">
                 <li>+34676138583
-                    <button class="botonGlobal" aria-label="Copiar número de teléfono" title="Copiar tel&eacute;fono" onclick="copiarAlPortapapeles('676138583')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                    <button type="button" class="botonGlobal" aria-label="Copiar número de teléfono" title="Copiar tel&eacute;fono" onclick="copiarAlPortapapeles('676138583', this)"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
                 </li> 
                 <li>rubennmg1996@gmail.com
-                    <button class="botonGlobal" title="Copiar correo" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com')"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
+                    <button type="button" class="botonGlobal" title="Copiar correo" onclick="copiarAlPortapapeles('rubennmg1996@gmail.com', this)"><boton-ok class="botonOk"></boton-ok><boton-copiar class="botonCopiar"></boton-copiar></button>
                 </li>
             </ul>
 
@@ -266,29 +266,64 @@ You can try both games <a href="https://escueladeciencia.itch.io/" target="_blan
             document.getElementById("contacto").classList.toggle('mostrar');
             }
 
-            function copiarAlPortapapeles(texto) {
-                navigator.clipboard.writeText(texto);
-                
-                const boton = event.currentTarget;
-                const iconoOk = boton.querySelector('.botonOk');
-                const iconoCopiar = boton.querySelector('.botonCopiar');
-                
-                // Animación suave
-                iconoCopiar.style.opacity = '0';
-                setTimeout(() => {
-                    iconoCopiar.style.display = 'none';
-                    iconoOk.style.display = 'inline';
-                    iconoOk.style.opacity = '1';
-                }, 200);
-                
-                setTimeout(() => {
-                    iconoOk.style.opacity = '0';
+            function copiarAlPortapapeles(texto, boton = null) {
+                const botonActual = boton || (typeof event !== 'undefined' && event.currentTarget ? event.currentTarget : null);
+                const iconoOk = botonActual ? botonActual.querySelector('.botonOk') : null;
+                const iconoCopiar = botonActual ? botonActual.querySelector('.botonCopiar') : null;
+
+                const animarCopia = () => {
+                    if (!iconoOk || !iconoCopiar) return;
+
+                    iconoCopiar.style.opacity = '0';
                     setTimeout(() => {
-                        iconoOk.style.display = 'none';
-                        iconoCopiar.style.display = 'inline';
-                        iconoCopiar.style.opacity = '1';
+                        iconoCopiar.style.display = 'none';
+                        iconoOk.style.display = 'inline';
+                        iconoOk.style.opacity = '1';
                     }, 200);
-                }, 2000);
+
+                    setTimeout(() => {
+                        iconoOk.style.opacity = '0';
+                        setTimeout(() => {
+                            iconoOk.style.display = 'none';
+                            iconoCopiar.style.display = 'inline';
+                            iconoCopiar.style.opacity = '1';
+                        }, 200);
+                    }, 2000);
+                };
+
+                const abrirCorreo = () => {
+                    window.location.href = 'mailto:' + texto;
+                };
+
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(texto)
+                        .then(animarCopia)
+                        .catch(() => {
+                            abrirCorreo();
+                        });
+                    return;
+                }
+
+                const areaTemporal = document.createElement('textarea');
+                areaTemporal.value = texto;
+                areaTemporal.setAttribute('readonly', '');
+                areaTemporal.style.position = 'fixed';
+                areaTemporal.style.opacity = '0';
+                document.body.appendChild(areaTemporal);
+                areaTemporal.select();
+
+                try {
+                    const copiado = document.execCommand('copy');
+                    if (copiado) {
+                        animarCopia();
+                    } else {
+                        abrirCorreo();
+                    }
+                } catch (error) {
+                    abrirCorreo();
+                } finally {
+                    document.body.removeChild(areaTemporal);
+                }
             }
         </script>
 
